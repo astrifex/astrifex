@@ -1,0 +1,10 @@
+{
+  "name": "astrifex",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.21",
+    "bootstrap-sass-official": "~3.2.0",
+    "angular-bootstrap": "~0.11.0",
+    "angular-ui-router": "~0.2.10"
+  }
+}

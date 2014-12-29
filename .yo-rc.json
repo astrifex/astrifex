@@ -1,0 +1,11 @@
+{
+  "generator-angulpify": {
+    "projectName": "astrifex",
+    "coffee": true,
+    "jade": false,
+    "sass": true,
+    "bootstrap": true,
+    "uiBootstrap": true,
+    "uiRouter": true
+  }
+}
