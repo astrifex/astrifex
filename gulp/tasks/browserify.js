@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp = require('gulp');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var browserifyShim = require('browserify-shim');
-var coffeeify = require('coffeeify');
+var gulp = require('gulp'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    browserifyShim = require('browserify-shim'),
+    coffeeify = require('coffeeify');
 
 module.exports = gulp.task('browserify', function () {
   return browserify({
