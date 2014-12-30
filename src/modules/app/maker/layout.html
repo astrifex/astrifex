@@ -1,6 +1,19 @@
-<div class="welcome">
-  <a href="https://github.com/jgoux/generator-angulpify" title="Yeoman Angulpify Generator">
-    <img src="assets/images/angulpify.png">
-  </a>
-  <h1>{{welcome}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <form>
+        <div class="form-group">
+          <label for="corners">Corners</label>
+          <input type="number" min="3" class="form-control" id="corners" ng-model="star.corners">
+        </div>
+
+        <div class="form-group">
+          <label for="spoke-ratio">Spoke Ratio</label>
+          <input type="number" class="form-control" id="spoke-ratio" ng-model="star.spokeRatio">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8">
+    </div>
+  </div>
 </div>

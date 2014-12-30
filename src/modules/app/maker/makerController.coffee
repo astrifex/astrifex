@@ -2,5 +2,5 @@
 
 ### @ngInject ###
 module.exports = ($scope) ->
-  $scope.welcome = "Congratulations!"
+  $scope.star = { corners: 5, spokeRatio: 0.5 }
   return
