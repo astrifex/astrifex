@@ -5,5 +5,5 @@ module.exports = angular.module('astrifex', [
   'ui.router'
   require('../../../tmp/templates').name
   require('../common/index').name
-  require('./foo/index').name
+  require('./maker/index').name
 ])
