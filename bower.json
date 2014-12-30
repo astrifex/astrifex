@@ -5,6 +5,7 @@
     "angular": "~1.2.21",
     "bootstrap-sass-official": "~3.3.1",
     "angular-bootstrap": "~0.11.0",
-    "angular-ui-router": "~0.2.10"
+    "angular-ui-router": "~0.2.10",
+    "angular-svg-star-directive": "md5/angular-svg-star-directive"
   }
 }

@@ -34,6 +34,7 @@
   },
   "browser": {
     "angular": "./bower_components/angular/angular.min.js",
+    "angular-svg-star-directive": "./bower_components/angular-svg-star-directive/dist/angular-svg-star-directive.min.js",
     "angular-ui-bootstrap": "./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
     "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js"
   },
