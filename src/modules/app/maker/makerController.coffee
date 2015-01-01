@@ -8,6 +8,17 @@ module.exports = ($scope) ->
     fill: '#f0c039',
     stroke: '#e4a91a',
     skew: 0,
-    randomness: 0
+    randomness: 0,
+    size: 100
   }
+
+  $scope.updateBoxStyle = ->
+    $scope.boxStyle = {
+      display: 'inline-block',
+      width:   $scope.star.size + 'px',
+      height:  $scope.star.size + 'px'
+    }
+
+  $scope.updateBoxStyle()
+
   return

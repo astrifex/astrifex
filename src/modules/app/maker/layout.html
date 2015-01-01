@@ -31,10 +31,17 @@
           <label for="stroke">Stroke Color</label>
           <input type="color" class="form-control" id="stroke" ng-model="star.stroke" required>
         </div>
+
+        <div class="form-group">
+          <label for="size">Size</label>
+          <input type="number" min="0" step="10" class="form-control" id="size" ng-model="star.size" ng-change="updateBoxStyle()" required>
+        </div>
       </form>
     </div>
-    <div class="col-md-8">
-      <svg-star corners="{{star.corners}}" spoke-ratio="{{star.spokeRatio}}" skew="{{star.skew}}" randomness="{{star.randomness}}" fill="{{star.fill}}" stroke="{{star.stroke}}"></svg-star>
+    <div class="col-md-8 well">
+      <div ng-style="boxStyle">
+        <svg-star corners="{{star.corners}}" spoke-ratio="{{star.spokeRatio}}" skew="{{star.skew}}" randomness="{{star.randomness}}" fill="{{star.fill}}" stroke="{{star.stroke}}" size="{{star.size}}"></svg-star>
+      </div>
     </div>
   </div>
 </div>
