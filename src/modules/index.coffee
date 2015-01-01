@@ -7,6 +7,7 @@ require 'angular'
 require 'angular-svg-star-directive'
 require 'angular-ui-bootstrap'
 require 'angular-ui-router'
+require 'seedrandom'
 ###
 app entry point
 ###
