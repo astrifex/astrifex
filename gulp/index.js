@@ -10,5 +10,7 @@ require('./config');
 global.release = argv.release;
 
 tasks.forEach(function (task) {
-  require('./tasks/' + task);
+  if (/\.(js|coffee)$/.test(task)) {
+    require('./tasks/' + task);
+  }
 });
