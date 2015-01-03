@@ -13,7 +13,7 @@ git clone --depth=1 https://github.com/astrifex/astrifex.github.io.git tmp/astri
 
 cd tmp/astrifex.github.io
 git rm -fr .
-cp -r "$TRAVIS_BUILD_DIR/release/*" .
+cp -r "$TRAVIS_BUILD_DIR/release"/* .
 
 git add -A
 git config user.name "Astrifex CI"
