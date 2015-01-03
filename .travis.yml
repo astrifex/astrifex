@@ -11,4 +11,6 @@ cache:
     - node_modules
 
 before_script:
-- node_modules/.bin/bower install --config.interactive=false
+- npm install -g bower broccoli-cli
+- bower install --config.interactive=false
+- broccoli build release
