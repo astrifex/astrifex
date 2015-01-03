@@ -1,4 +1,4 @@
-# Astrifex [![Build Status](https://travis-ci.org/astrifex/astrifex.png)](https://travis-ci.org/astrifex/astrifex)
+# Astrifex [![Build Status](https://travis-ci.org/astrifex/astrifex.svg)](https://travis-ci.org/astrifex/astrifex)
 
 [Astrifex](https://astrifex.github.io/) is an interactive SVG star generator.
 
