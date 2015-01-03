@@ -24,4 +24,4 @@ git config credential.helper "store --file=.git/credentials"
 set +x
 echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 set -x
-git push site master
+git push origin master
