@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = angular.module('astrifex.maker', [])
+module.exports = angular.module('astrifex.maker', ['ui.router'])
     .config(($stateProvider) ->
       $stateProvider.state 'maker',
       url: ''
