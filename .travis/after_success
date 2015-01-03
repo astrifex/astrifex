@@ -15,18 +15,20 @@ cd tmp/astrifex.github.io
 git rm -fr .
 cp -r "$TRAVIS_BUILD_DIR/release"/* .
 
-git add -A
-git config user.name "Astrifex CI"
-git config user.email "astrifex-ci@users.noreply.github.com"
-git commit -F- <<EOM
+if git diff-index --quiet HEAD .; then
+	git config user.name "Astrifex CI"
+	git config user.email "astrifex-ci@users.noreply.github.com"
+	git config credential.helper "store --file=.git/credentials"
+	set +x
+	echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+	set -x
+
+	git add -A
+	git commit -F- <<EOM
 Automated site build #$TRAVIS_BUILD_NUMBER
 
 Build:   https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID
 Changes: https://github.com/$TRAVIS_REPO_SLUG/compare/$TRAVIS_COMMIT_RANGE
 EOM
-
-git config credential.helper "store --file=.git/credentials"
-set +x
-echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-set -x
-git push origin master
+	git push origin master
+fi
