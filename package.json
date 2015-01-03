@@ -1,4 +1,7 @@
 {
+  "name": "astrifex",
+  "description": "Interactive SVG star generator",
+  "version": "0.0.0",
   "private": "true",
   "engines": {
     "node": ">=0.10.0"
