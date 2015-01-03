@@ -7,7 +7,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "echo 'Who needs tests?'"
+    "test": "karma start --single-run --browsers PhantomJS test/karma.conf.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -23,7 +23,11 @@
     "broccoli-uglify-js": "^0.1.3",
     "broccoli-watchify": "^0.2.0",
     "browserify": "^8.0.3",
-    "browserify-shim": "^3.8.2"
+    "browserify-shim": "^3.8.2",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.31",
+    "karma-jasmine": "^0.3.3",
+    "karma-phantomjs-launcher": "^0.1.4"
   },
   "browser": {
     "angular": "./bower_components/angular/angular.js",

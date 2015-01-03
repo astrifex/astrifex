@@ -10,7 +10,11 @@ cache:
     - bower_components
     - node_modules
 
-before_script:
-- npm install -g bower broccoli-cli
+install:
+- npm install
+- npm install -g bower broccoli-cli karma-cli
 - bower install --config.interactive=false
-- broccoli build release
+
+script:
+- BROCCOLI_ENV=production broccoli build release
+- npm test
