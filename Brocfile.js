@@ -5,6 +5,8 @@ var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
 var browserify = require('broccoli-browserify');
 var html2js = require('broccoli-html2js');
+var ngAnnotate = require('broccoli-ng-annotate');
+var csso = require('broccoli-csso');
 var env = require('broccoli-env').getEnv();
 
 var js = 'src/modules';
@@ -28,10 +30,6 @@ js = browserify(js, {
   transform: ['browserify-shim']
 });
 
-if (env === 'production') {
-  js = uglifyJavaScript(js);
-}
-
 var css = compileSass(['src/styles'], 'app.scss', 'astrifex.css');
 
 var html = pickFiles('src', {
@@ -39,5 +37,11 @@ var html = pickFiles('src', {
   files: ['index.html'],
   destDir: '/'
 });
+
+if (env === 'production') {
+  js = ngAnnotate(js);
+  js = uglifyJavaScript(js);
+  css = csso(css);
+}
 
 module.exports = mergeTrees([js,css,html]);
