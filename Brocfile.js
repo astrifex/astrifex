@@ -3,7 +3,7 @@ var filterCoffeeScript = require('broccoli-coffee');
 var uglifyJavaScript = require('broccoli-uglify-js');
 var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
-var browserify = require('broccoli-browserify');
+var watchify = require('broccoli-watchify');
 var html2js = require('broccoli-html2js');
 var ngAnnotate = require('broccoli-ng-annotate');
 var csso = require('broccoli-csso');
@@ -24,10 +24,13 @@ var templateJs = html2js('src/modules', {
 
 js = mergeTrees([js, templateJs]);
 
-js = browserify(js, {
-  entries: ['./index.js'],
+js = watchify(js, {
+  browserify: {
+    entries: ['./index.js'],
+    transform: ['browserify-shim']
+  },
   outputFile: './astrifex.js',
-  transform: ['browserify-shim']
+  cache: env !== 'production'
 });
 
 var css = compileSass(['src/styles'], 'app.scss', 'astrifex.css');
