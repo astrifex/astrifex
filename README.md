@@ -4,13 +4,13 @@
 
 ## Usage
 
-To use Astrifex, go to https://astrifex.github.io/ on your browser. Mobile
-browsers will work as well, though the control design has not been optimized
-for mobile.
+To use Astrifex, go to https://astrifex.github.io/ in your browser. Mobile
+browsers will work as well, though the control design has not yet been
+optimized for mobile.
 
-To run Astrifex locally, run `gulp`. This will bring up a local instance of
-Astrifex at http://localhost:8080/. That being said, Astrifex is (currently) a
-browser-only app and can be run without a web server.
+To run Astrifex locally, first run `npm install` and `bower install, then run
+`gulp`. This will bring up a local instance of Astrifex at
+http://localhost:8080/.
 
 ## Inspiration
 
