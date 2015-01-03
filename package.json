@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "browserify-shim": "^3.6.0",
-    "coffeeify": "^0.7.0",
+    "coffeeify": "^1.0.0",
     "connect": "^2.24.2",
     "gulp": "^3.8.0",
     "gulp-angular-templatecache": "^1.2.1",
