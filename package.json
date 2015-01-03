@@ -7,7 +7,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "karma start --single-run --browsers PhantomJS test/karma.conf.js"
+    "test": "grunt karma:unit"
   },
   "dependencies": {},
   "devDependencies": {

@@ -3,7 +3,8 @@ module.exports = function (config) {
     basePath: '../',
 
     files: [
-      'release/astrifex.js',
+      // XXX: Revisit this nasty hack...
+      process.env.TRAVIS ? 'release/astrifex.js' : 'build/astrifex.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'test/unit/**/*.js'
     ],

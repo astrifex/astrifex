@@ -16,11 +16,11 @@ env:
 
 install:
 - npm install
-- npm install -g bower broccoli-cli karma-cli
+- npm install -g bower grunt-cli
 - bower install --config.interactive=false
 
 script:
-- BROCCOLI_ENV=production broccoli build release
+- grunt broccoli:release:build
 - npm test
 
 after_success: .travis/after_success
