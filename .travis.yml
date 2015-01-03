@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+- 0.10
+
+sudo: false
+
+cache:
+  directories:
+    - bower_components
+    - node_modules
+
+before_script:
+- node_modules/.bin/bower install --config.interactive=false

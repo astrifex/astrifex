@@ -6,6 +6,9 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "scripts": {
+    "test": "echo 'Who needs tests?'"
+  },
   "dependencies": {},
   "devDependencies": {
     "broccoli": "^0.13.3",
