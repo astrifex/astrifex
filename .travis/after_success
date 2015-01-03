@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+set -x
+
+if ! [[ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]]; then
+	echo -e "\n"
+	exit 0
+fi
+
+git clone --depth=1 https://github.com/astrifex/astrifex.github.io.git tmp/astrifex.github.io
+
+cd tmp/astrifex.github.io
+git rm -fr .
+cp -r "$TRAVIS_BUILD_DIR/release/*" .
+
+git add -A
+git config user.name "Astrifex CI"
+git config user.email "astrifex-ci@users.noreply.github.com"
+git commit -m "Site build successful: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_NUMBER"
+
+git config credential.helper "store --file=.git/credentials"
+set +x
+echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+set -x
+git push site master

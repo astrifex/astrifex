@@ -18,3 +18,5 @@ install:
 script:
 - BROCCOLI_ENV=production broccoli build release
 - npm test
+
+after_success: .travis/after_success
