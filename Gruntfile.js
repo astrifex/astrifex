@@ -26,6 +26,11 @@ module.exports = function (grunt) {
         branch: 'master'
       },
       src: ['**']
+    },
+    clean: {
+      dev: ['build'],
+      release: ['release'],
+      tmp: ['tmp/**/*']
     }
   });
 
