@@ -6,6 +6,8 @@
   "scripts": {
     "postinstall": "npm install browserify@4.2.3 gulp-header"
   },
+  "dependencies": {
+  },
   "devDependencies": {
     "browserify-shim": "^3.6.0",
     "coffeeify": "^0.7.0",
