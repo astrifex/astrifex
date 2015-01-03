@@ -15,7 +15,13 @@ js = filterCoffeeScript(js, {
   bare: true
 });
 
-var templateJs = html2js('src/modules', {
+var templates = pickFiles('src/modules', {
+  srcDir: '/',
+  files: ['**/*.html'],
+  destDir: '/'
+});
+
+var templateJs = html2js(templates, {
   inputFiles: ['**/*.html'],
   outputFile: '/templates.js',
   fileHeaderString: 'module.exports = ',
