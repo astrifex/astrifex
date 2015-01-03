@@ -19,7 +19,7 @@ git add -A
 git config user.name "Astrifex CI"
 git config user.email "astrifex-ci@users.noreply.github.com"
 git commit -F- <<EOM
-Automated site build ($TRAVIS_REPO_SLUG#$TRAVIS_BUILD_NUMBER)
+Automated site build #$TRAVIS_BUILD_NUMBER
 
 Build:   https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID
 Changes: https://github.com/$TRAVIS_REPO_SLUG/compare/$TRAVIS_COMMIT_RANGE
