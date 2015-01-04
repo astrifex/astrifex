@@ -1,0 +1,9 @@
+<ul class="paint-selector">
+  <li class="form-inline">
+    <label><input type="radio" ng-model="paintType" value="color">
+    <input type="color" class="form-control" ng-model="paintColor" ng-disabled="paintType != 'color'"></label>
+  </li>
+  <li>
+    <label><input type="radio" ng-model="paintType" value="none"> <code>none</code></label>
+  </li>
+</ul>
