@@ -28,8 +28,16 @@
         </div>
 
         <div class="form-group">
-          <label for="stroke">Stroke</label>
-          <input type="color" class="form-control" id="stroke" ng-model="star.stroke" required>
+          <label>Stroke</label>
+          <ul class="paint-selector">
+            <li class="form-inline">
+              <label><input type="radio" name="strokeType" ng-model="star.strokeType" ng-change="updateStroke()" value="color"></label>
+              <input type="color" class="form-control" id="strokeColor" ng-model="star.strokeColor" ng-disabled="star.strokeType != 'color'" ng-change="updateStroke()">
+            </li>
+            <li>
+              <label><input type="radio" name="strokeType" ng-model="star.strokeType" ng-change="updateStroke()" value="none"> <code>none</code></label>
+            </li>
+          </ul>
         </div>
 
         <div class="form-group">

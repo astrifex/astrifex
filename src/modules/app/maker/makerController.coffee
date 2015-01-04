@@ -6,11 +6,18 @@ module.exports = ($scope) ->
     corners: 5,
     spokeRatio: 0.5,
     fill: '#f0c039',
-    stroke: '#e4a91a',
+    strokeType: 'color',
+    strokeColor: '#e4a91a',
     skew: 0,
     randomness: 0,
     size: 100
   }
+
+  $scope.updateStroke = ->
+    $scope.star.stroke = switch ($scope.star.strokeType)
+      when 'color' then $scope.star.strokeColor
+      else 'none'
+  $scope.updateStroke()
 
   $scope.updateBoxStyle = ->
     $scope.boxStyle = {
@@ -18,7 +25,6 @@ module.exports = ($scope) ->
       width:   $scope.star.size + 'px',
       height:  $scope.star.size + 'px'
     }
-
   $scope.updateBoxStyle()
 
   return
