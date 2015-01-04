@@ -37,6 +37,7 @@
   },
   "browser": {
     "angular": "./bower_components/angular/angular.js",
+    "angular-bootstrap-show-errors": "./bower_components/angular-bootstrap-show-errors/src/showErrors.js",
     "angular-svg-star-directive": "./bower_components/angular-svg-star-directive/svg-star.js",
     "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.js",
     "seedrandom": "./bower_components/seedrandom/seedrandom.js"

@@ -2,24 +2,24 @@
   <div class="row">
     <div class="col-sm-4 hidden-print">
       <form>
-        <div class="form-group">
-          <label for="corners">Corners</label>
-          <input type="number" min="3" max="1024" class="form-control" id="corners" ng-model="star.corners" required>
+        <div class="form-group" show-errors>
+          <label for="corners" class="control-label">Corners</label>
+          <input type="number" min="3" max="1024" class="form-control" id="corners" name="corners" ng-model="star.corners" required>
         </div>
 
-        <div class="form-group">
-          <label for="spoke-ratio">Spoke Ratio</label>
-          <input type="number" step="0.05" class="form-control" id="spoke-ratio" ng-model="star.spokeRatio" required>
+        <div class="form-group" show-errors>
+          <label for="spoke-ratio" class="control-label"">Spoke Ratio</label>
+          <input type="number" step="0.05" class="form-control" id="spoke-ratio" name="spoke-ratio" ng-model="star.spokeRatio" required>
         </div>
 
-        <div class="form-group">
-          <label for="skew">Skew</label>
-          <input type="number" step="0.05" class="form-control" id="skew" ng-model="star.skew" required>
+        <div class="form-group" show-errors>
+          <label for="skew" class="control-label">Skew</label>
+          <input type="number" step="0.05" class="form-control" id="skew" name="skew" ng-model="star.skew" required>
         </div>
 
-        <div class="form-group">
-          <label for="randomness">Randomness</label>
-          <input type="number" step="0.01" class="form-control" id="randomness" ng-model="star.randomness" required>
+        <div class="form-group" show-errors>
+          <label for="randomness" class="control-label">Randomness</label>
+          <input type="number" step="0.01" class="form-control" id="randomness" name="randomness" ng-model="star.randomness" required>
         </div>
 
         <div class="form-group">
@@ -32,9 +32,9 @@
           <paint-selector paint="star.stroke"></paint-selector>
         </div>
 
-        <div class="form-group">
-          <label for="size">Size</label>
-          <input type="number" min="0" step="10" class="form-control" id="size" ng-model="star.size" ng-change="updateBoxStyle()" required>
+        <div class="form-group" show-errors>
+          <label for="size" class="control-label">Size</label>
+          <input type="number" min="0" step="10" class="form-control" id="size" name="size" ng-model="star.size" ng-change="updateBoxStyle()" required>
         </div>
       </form>
     </div>
