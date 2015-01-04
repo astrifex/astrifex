@@ -24,6 +24,8 @@ var templates = pickFiles('src/modules', {
 var templateJs = html2js(templates, {
   inputFiles: ['**/*.html'],
   outputFile: '/templates.js',
+  module: 'astrifex.templates',
+  singleModule: true,
   fileHeaderString: 'module.exports = ',
   htmlmin: { collapseWhitespace: true }
 });
