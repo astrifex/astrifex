@@ -25,3 +25,12 @@ script:
 - npm test
 
 after_success: .travis/after_success
+
+notifications:
+  webhooks:
+    urls:
+      # Gitter.im
+      - secure: "Axq+vsnQ8Jwb/Vbbjpm9lqDgnm3tmeXdSyScL3QXokhHnUVyQ1O14Uvu7IekQmyPBjJq+/EwORzqhQbrzDlOINcQugOQNbjhxajJO9r2ILqwiIJRnFJ0mxlrVQAP/OZM5t5gPZdJIlMHDSYy6AUVxsygU/bLNsh9a6Ktwz36Z88="
+    on_success: change
+    on_failure: always
+    on_start: false
