@@ -1,5 +1,7 @@
 # Astrifex [![Build Status](https://travis-ci.org/astrifex/astrifex.svg)](https://travis-ci.org/astrifex/astrifex)
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/astrifex/astrifex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Astrifex](https://astrifex.github.io/) is an interactive SVG star generator.
 
 ## Usage
