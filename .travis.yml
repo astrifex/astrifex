@@ -12,7 +12,8 @@ cache:
 
 env:
   global:
-    secure: "d9Lws27Y4WkxV3PlRbACsBj2JIJNw5sNbDe0VZRXlQKFyWt3WO2gAR/+P+/dTnFu8XwD15XC7KL6BLPh2IFAv3YWK2Se/xGSsHSWgP8k+PVTn9t8Rs4Q0IcF3aJ8tzdqN0cY14+9yRN2w7HpJQripCjnZHIgbkgA3/rATtxbhG0="
+    # GH_TOKEN
+    - secure: "d9Lws27Y4WkxV3PlRbACsBj2JIJNw5sNbDe0VZRXlQKFyWt3WO2gAR/+P+/dTnFu8XwD15XC7KL6BLPh2IFAv3YWK2Se/xGSsHSWgP8k+PVTn9t8Rs4Q0IcF3aJ8tzdqN0cY14+9yRN2w7HpJQripCjnZHIgbkgA3/rATtxbhG0="
 
 install:
 - npm install
