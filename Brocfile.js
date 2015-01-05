@@ -49,10 +49,15 @@ var html = pickFiles('src', {
   destDir: '/'
 });
 
+var fonts = pickFiles('bower_components/bootstrap-sass-official/assets/fonts/bootstrap/', {
+  srcDir: '/',
+  destDir: '/assets/fonts/bootstrap'
+});
+
 if (env === 'production') {
   js = ngAnnotate(js);
   js = uglifyJavaScript(js);
   css = csso(css);
 }
 
-module.exports = mergeTrees([js,css,html]);
+module.exports = mergeTrees([js,css,html,fonts]);

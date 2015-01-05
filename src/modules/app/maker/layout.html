@@ -73,22 +73,25 @@
       </form>
     </div>
     <div class="col-sm-8">
-      <div role="tabpanel">
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#figure" aria-controls="figure" role="tab">Figure</a></li>
-          <li role="presentation"><a href="#code" aria-controls="code" role="tab">Code</a></li>
-        </ul>
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="figure">
-            <div ng-style="boxStyle">
-              <svg-star corners="{{star.corners}}" spoke-ratio="{{star.spokeRatio}}" skew="{{star.skew / 100}}" randomness="{{star.randomness / 100}}" fill="{{star.fill}}" stroke="{{star.stroke}}" size="{{star.size}}"></svg-star>
-            </div>
+      <tabset>
+        <tab>
+          <tab-heading>Figure <span class="glyphicon glyphicon-star"></span></tab-heading>
+          <div ng-style="boxStyle">
+            <svg-star
+              corners="{{star.corners}}"
+              spoke-ratio="{{star.spokeRatio}}"
+              skew="{{star.skew / 100}}"
+              randomness="{{star.randomness / 100}}"
+              fill="{{star.fill}}"
+              stroke="{{star.stroke}}"
+              size="{{star.size}}"></svg-star>
           </div>
-          <div role="tabpanel" class="tab-pane" id="code">
-            <code>{{svgCode}}</code>
-          </div>
-        </div>
-      </div>
+        </tab>
+        <tab>
+          <tab-heading>Code <span class="glyphicon glyphicon-cog"></span></tab-heading>
+          <pre>{{svgCode}}</pre>
+        </tab>
+      </tabset>
     </div>
   </div>
 </div>
