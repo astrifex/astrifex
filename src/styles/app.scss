@@ -1,5 +1,6 @@
 @import "variables";
 @import "imports";
+@import "common/directives/_paintSelector";
 
 body {
   padding-top: 70px;
@@ -7,14 +8,4 @@ body {
 
 nav .navbar-brand {
   font-family: Pacifico;
-}
-
-.paint-selector {
-  list-style: none;
-  padding-left: 0px;
-
-  .form-inline label input[type=color] {
-    margin-left: 4px;
-    min-width: 50px;
-  }
 }
