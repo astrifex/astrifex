@@ -62,7 +62,10 @@
 
         <div class="form-group" show-errors>
           <label for="size" class="control-label">Size</label>
-          <input type="number" min="0" step="10" class="form-control" id="size" name="size" ng-model="star.size" ng-change="updateBoxStyle()" required>
+          <div class="input-group">
+            <input type="number" min="0" step="10" class="form-control" id="size" name="size" ng-model="star.size" ng-change="updateBoxStyle()" required>
+            <div class="input-group-addon"><abbr title="pixels">px</abbr></div>
+          </div>
           <div class="help-block" ng-show="starMaker.size.$touched && !starMaker.size.$valid">
             Size in pixels. Must be a number greater than zero.
           </div>
