@@ -9,7 +9,7 @@ module.exports = ($scope) ->
     stroke: '#e4a91a',
     skew: 0,
     randomness: 0,
-    size: 100
+    size: 250
   }
 
   $scope.updateBoxStyle = ->
