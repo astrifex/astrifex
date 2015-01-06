@@ -11,7 +11,7 @@ browsers will work as well, though the control design has not yet been
 optimized for mobile.
 
 To run Astrifex locally, first run `npm install`, then run `grunt`. This will
-bring up a local instance of Astrifex at http://localhost:4200/.
+bring up a local instance of Astrifex at [http://localhost:4200/](http://localhost:4200/).
 
 ## Inspiration
 
