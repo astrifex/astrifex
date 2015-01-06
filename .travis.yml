@@ -7,7 +7,6 @@ sudo: false
 
 cache:
   directories:
-    - bower_components
     - node_modules
 
 env:
@@ -17,8 +16,7 @@ env:
 
 install:
 - npm install
-- npm install -g bower grunt-cli
-- bower install --config.interactive=false
+- npm install -g grunt-cli
 
 script:
 - grunt broccoli:release:build
