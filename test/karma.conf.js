@@ -5,7 +5,7 @@ module.exports = function (config) {
     files: [
       // XXX: Revisit this nasty hack...
       process.env.TRAVIS ? 'release/astrifex.js' : 'build/astrifex.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'node_modules/angular-mocks/angular-mocks.js',
       'test/unit/**/*.js'
     ],
 
