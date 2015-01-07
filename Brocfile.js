@@ -9,9 +9,9 @@ var ngAnnotate = require('broccoli-ng-annotate');
 var csso = require('broccoli-csso');
 var env = require('broccoli-env').getEnv();
 
-var js = 'src/modules';
+var appJs = 'src/modules';
 
-js = filterCoffeeScript(js, {
+appJs = filterCoffeeScript(appJs, {
   bare: true
 });
 
@@ -30,9 +30,9 @@ var templateJs = html2js(templates, {
   htmlmin: { collapseWhitespace: true }
 });
 
-js = mergeTrees([js, templateJs]);
+appJs = mergeTrees([appJs, templateJs]);
 
-js = watchify(js, {
+appJs = watchify(appJs, {
   browserify: {
     entries: ['./index.js'],
     transform: ['browserify-shim']
@@ -41,7 +41,8 @@ js = watchify(js, {
   cache: env !== 'production'
 });
 
-var css = compileSass(['src/styles'], 'app.scss', 'astrifex.css');
+var vendorCss = compileSass(['src/styles'], 'vendor.scss', 'vendor.css');
+var appCss = compileSass(['src/styles'], 'app.scss', 'astrifex.css');
 
 var html = pickFiles('src', {
   srcDir: '/',
@@ -49,9 +50,10 @@ var html = pickFiles('src', {
   destDir: '/'
 });
 
+var js = mergeTrees([appJs]);
+var css = mergeTrees([appCss,vendorCss]);
 if (env === 'production') {
-  js = ngAnnotate(js);
-  js = uglifyJavaScript(js);
+  js = uglifyJavaScript(ngAnnotate(js));
   css = csso(css);
 }
 
