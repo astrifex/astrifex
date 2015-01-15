@@ -9,6 +9,7 @@ module.exports = ($scope) ->
     stroke: '#e4a91a',
     skew: 0,
     randomness: 0,
+    roundness: 0,
     size: 250
   }
 

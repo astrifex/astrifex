@@ -44,6 +44,14 @@
           </div>
         </div>
 
+        <div class="form-group" show-errors>
+          <label for="roundness" class="control-label">Roundness</label>
+          <input type="number" class="form-control" id="roundness" step="0.01" name="roundness" ng-model="star.roundness" required>
+          <div class="help-block" ng-show="starMaker.roundness.$touched && !starMaker.roundness.$valid">
+            Roundness must be a number.
+          </div>
+        </div>
+
         <div class="form-group">
           <label>Fill</label>
           <paint-selector paint="star.fill"></paint-selector>
@@ -74,7 +82,7 @@
     </div>
     <div class="col-sm-8 well">
       <div ng-style="boxStyle">
-        <svg-star corners="{{star.corners}}" spoke-ratio="{{star.spokeRatio}}" skew="{{star.skew / 100}}" randomness="{{star.randomness / 100}}" fill="{{star.fill}}" stroke="{{star.stroke}}" size="{{star.size}}"></svg-star>
+        <svg-star corners="{{star.corners}}" spoke-ratio="{{star.spokeRatio}}" skew="{{star.skew / 100}}" randomness="{{star.randomness / 100}}" roundness="{{star.roundness}}" fill="{{star.fill}}" stroke="{{star.stroke}}" size="{{star.size}}"></svg-star>
       </div>
     </div>
   </div>
